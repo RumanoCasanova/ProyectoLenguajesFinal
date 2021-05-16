@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vehiculos de circuitos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Vehiculos con sus pilotos </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehiculo : ${vehiculos}">
+        <td><samp th:text="${vehiculo.nombre}"></samp></td>
+        <td><samp th:text="${vehiculo.velocidad}"></samp></td>
+        <td><samp th:text="${vehiculo.potencia}"></samp></td>
+        <td><samp th:text="${vehiculo.piloto}"></samp></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
